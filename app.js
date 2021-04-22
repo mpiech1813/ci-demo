@@ -7,7 +7,7 @@ app.get('/', (req, res, next) => {
   res.send(`
     <html>
         <body>
-            Bla Bla Bla
+            The Acme API
         </body>
     </html>
     `);
