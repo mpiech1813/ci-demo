@@ -1,5 +1,6 @@
 //git checkout -b your-name-here
 //git push origin your-name-here
+// node -v to check version
 
 const { expect } = require('chai');
 
