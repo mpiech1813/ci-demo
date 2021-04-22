@@ -1,8 +1,24 @@
 const Sequelize = require('sequelize');
 const { STRING } = Sequelize;
+
+/*
+if getting an error on heroku:
+
+const config = {}
+
+if(process.env.SSL){
+    config.dialectOptions = {
+        ssl: {
+            refectUnauthorized: false
+        }
+    }
+}
+*/
+
 const conn = new Sequelize(
   process.env.DATABASE_URL || 'postgresql://localhost/acme_db',
-  { logging: false }
+
+  { logging: false } //add config if running into trouble
 );
 
 const Product = conn.define('product', {

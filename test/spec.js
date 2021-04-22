@@ -22,5 +22,10 @@ describe('Routes', () => {
       expect(response.status).to.equal(200);
       expect(response.body.length).to.equal(2); //documentation for this test is from supertest
     });
+    it('sends cors header', async () => {
+      const response = await app.get('/api/products');
+      expect(response.status).to.equal(200);
+      expect(response.headers['access-control-allow-origin']).to.equal('*');
+    });
   });
 });

@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const {
   models: { Product },
 } = require('./db');
+
+app.use(cors());
 
 module.exports = app;
 
